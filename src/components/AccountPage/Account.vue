@@ -155,10 +155,7 @@ export default {
   display: flex;
   flex-wrap: wrap;
   background-color: #F6F8F9;
-  padding-left: 225px;
-  padding-right: 225px;
-  padding-top: 50px;
-  padding-bottom: 150px;
+  padding: 100px 225px;
 }
 
 #signin, #registration {
