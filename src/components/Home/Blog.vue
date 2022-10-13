@@ -1,0 +1,49 @@
+<template>
+  <li class="search-item">
+    <div class="search-title">
+      <img :src="listing_img"/>
+      <p>{{ listing_title }}</p>
+    </div>
+    <ol class="search-result">
+      <li class="search-result-content" v-for="link in listing_item" :key="link.id">
+        <div class="search-result-img">
+          <img :src="link.img"/>
+        </div>
+        <div class="search-result-text">
+          <p class="search-result-title">{{ link.title }}</p>
+        </div>
+      </li>
+    </ol>
+    <div class="search-results-link">
+      <a>View all results</a>
+    </div>
+  </li>
+</template>
+
+<script>
+export default {
+  name: "BlogItem",
+  data() {
+    return {
+      listing_img: require('@/assets/blogicon.png'),
+      listing_title: "Blog",
+      listing_item: [
+        {
+          id: 1,
+          img: require('@/assets/blog-item-img.png'),
+          title: "Buying a Food Truck Business\n" +
+              "Opportunity: 5 Things to\n" +
+              "Consider",
+        },
+        {
+          id: 2,
+          img: require('@/assets/blog-item-img.png'),
+          title: "Who is Today’s Laundry \n" +
+              "Investor or Buyer: Blue Collar\n" +
+              "or White Collar?",
+        },
+      ]
+    }
+  }
+}
+</script>
